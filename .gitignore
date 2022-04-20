@@ -1,0 +1,14 @@
+bin/
+lib/
+
+ignored/
+decrypted/
+encrypted/
+
+static/
+
+*.env
+
+*.pyc
+*.sqlite3
+__pycache__/
