@@ -8,7 +8,7 @@ from django.conf import settings
 
 
 class Book(DjangoCassandraModel, PythonCassandraModel):
-    __keyspace__ = settings.ASTRA_DB_KEYSPACE
+    __keyspace__ = str(settings.ASTRA_DB_KEYSPACE)
     id = columns.UUID(primary_key=True, default=uuid.uuid4)
     title = columns.Text(required=True)
     author = columns.Text()
