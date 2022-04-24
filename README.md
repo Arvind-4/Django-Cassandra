@@ -24,32 +24,32 @@ $ git clone https://github.com/Arvind-4/Django-Cassandra.git .
 ```
 - Create Virtual Environment for Python
 
-```
+```sh
 $ pip install virtualenv
 $ python3.9 -m venv .
 ```
 
 - Activate Virtual Environment
 
-```
+```sh
 $ source bin/activate
 ```
 
 - Install Dependencies (for virtual environment)
 
-```
+```sh
 $ pip install -r requirements.txt
 ```
 
 - Install Dependencies (for Poetry)
 
-```
+```sh
 $ poetry install
 ```
 
 Create a **.env** file in the Root of the Project. Add Your Credentials to **.env** file.
 
-```
+```sh
 ASTRA_DB_CLIENT_ID=xxxx
 ASTRA_DB_CLIENT_SECRET=ixxxx
 ASTRA_DB_TOKEN=xxxx
@@ -72,7 +72,7 @@ DJANGO_ALLOWED_HOSTS=*
 
 
 - Your Project Structure should be Similar to this
-```
+```sh
 $ ls 
 	bin  				# Python Virtual Environment Files
 	commands  			# Shell Commands
@@ -87,13 +87,13 @@ $ ls
 ```
 
 - Run Server 
-```
+```sh
 $ cd web
 $ uvicorn backend.asgi:application --reload
 ```
 
 - To run Commands from **commands** directory
-```
+```sh
 $ chmod +x commands/*.sh
 $ commands/run.prod.sh
 ```
