@@ -16,14 +16,15 @@ load_dotenv()
 ASTRA_DB_CLIENT_ID = os.environ.get("ASTRA_DB_CLIENT_ID")
 ASTRA_DB_CLIENT_SECRET = os.environ.get("ASTRA_DB_CLIENT_SECRET")
 
+ZIP_FILE_NAME = "connect.zip"
 BUNDLE_DIR = pathlib.Path(__file__).resolve().parent.parent.parent.parent
 
 if settings.DEBUG:
     print("From Ignored ...")
-    CONNECT_BUNDLE = BUNDLE_DIR / "ignored" / "connect.zip"
+    CONNECT_BUNDLE = BUNDLE_DIR / "ignored" / ZIP_FILE_NAME
 else:
     print("From Decrypt ...")
-    CONNECT_BUNDLE = BUNDLE_DIR / "decrypted" / "connect.zip"
+    CONNECT_BUNDLE = BUNDLE_DIR / "decrypted" / ZIP_FILE_NAME
 
 
 def get_cluster():
